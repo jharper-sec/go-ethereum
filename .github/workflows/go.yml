@@ -83,7 +83,7 @@ jobs:
         export CONTRAST__APPLICATION__SESSION_METADATA="commitHash=$GITHUB_SHA,committer=$GITHUB_ACTOR,branchName=$GITHUB_REF,repository=$GITHUB_REPOSITORY,buildNumber=$GITHUB_RUN_NUMBER"
         echo $CONTRAST__APPLICATION__SESSION_METADATA
     
-    - name: Contrast Agent Docker Build
-      run: |
-        echo -e 'FROM scratch\nCOPY ./bin/geth-no-dataflow ./geth-no-dataflow\nENTRYPOINT ["./geth-no-dataflow"]' > Dockerfile-tmp
-        docker build . -f Dockerfile-tmp -t geth-contrast:latest -t geth-contrast:$CONTRAST_AGENT_VERSION
+#     - name: Contrast Agent Docker Build
+#       run: |
+#         echo -e 'FROM scratch\nCOPY ./bin/geth-no-dataflow ./geth-no-dataflow\nENTRYPOINT ["./geth-no-dataflow"]' > Dockerfile-tmp
+#         docker build . -f Dockerfile-tmp -t geth-contrast:latest -t geth-contrast:$CONTRAST_AGENT_VERSION
